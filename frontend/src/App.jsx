@@ -1,13 +1,18 @@
-import Home from "./pages/Home";
-
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+// import RequireAuth from "../routes/RequireAuth";
+import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
+import Budgets from "./pages/Budgets";
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <Home />
-      <p>coucou</p>
-    </div>
+    <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="/admin/Dashboard" element={<Dashboard />} />
+      <Route path="/budgets" element={<Budgets />} />
+    </Routes>
   );
 }
 
